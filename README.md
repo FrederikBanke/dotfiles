@@ -10,7 +10,7 @@ You will need the following installed on your system
 
 ### Git
 
-```
+```bash
 pacman -S git # Arch
 
 brew install git # MacOS
@@ -18,7 +18,7 @@ brew install git # MacOS
 
 ### Stow
 
-```
+```bash
 pacman -S stow # Arch
 
 brew install stow # MacOS
@@ -32,14 +32,14 @@ On MacOS, the native terminal cannot use true colors. Instead, download iTerm2.
 
 First, clone this repository to your home (`$HOME`) directory using git
 
-```
+```bash
 git clone git@github.com/frederikbanke/dotfiles.git # Or use HTTPS link
 cd dotfiles
 ```
 
 the use GNU stow to create symlinks
 
-```
+```bash
 stow .
 ```
 
