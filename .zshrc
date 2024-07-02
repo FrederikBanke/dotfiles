@@ -47,6 +47,7 @@ alias ls='ls --color' # Always use colors for files and dirs
 
 # Shell integrations
 eval "$(fzf --zsh)"
+eval "$(zoxide init --cmd cd zsh)"
 
 # Set the directory we want to store zinit and plugins.
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
