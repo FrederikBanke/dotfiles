@@ -24,6 +24,7 @@ disabled = false
 
 [os.symbols]
 Arch = ""
+EndeavourOS = ""
 Macos = ""
 Raspbian = ""
 Windows = "󰍲 "
