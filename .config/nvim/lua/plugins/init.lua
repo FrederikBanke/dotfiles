@@ -7,7 +7,7 @@ return {
         "f-person/git-blame.nvim",
         opts = {
             -- configuration comes here
-            delay = 5000 -- delay in ms until blame i shown
+            delay = 1000 -- delay in ms until blame i shown
         },
     },
     {
