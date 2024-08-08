@@ -1,13 +1,14 @@
 return {
     'akinsho/flutter-tools.nvim',
-    lazy = false,
+    ft = "dart", -- lazy load on .dart filetype.
     dependencies = {
         'nvim-lua/plenary.nvim',
         'stevearc/dressing.nvim', -- optional for vim.ui.select
     },
-    config = true,
-    -- Run FlutterReload command every time we save a .dart file.
-    init = function()
+    config = function (opts)
+        print("Flutter tools config")
+        require("flutter-tools").setup()
+        -- Run FlutterReload command every time we save a .dart file.
         vim.api.nvim_create_autocmd({ 'BufWritePre' }, {
             pattern = '*.dart',
             command = "FlutterReload"
