@@ -57,7 +57,10 @@ require('lspconfig').lua_ls.setup({
 cmp.setup({
     mapping = cmp.mapping.preset.insert({
         ["<CR>"] = cmp.mapping.confirm({ select = true }),
-        ["<tab>"] = cmp.mapping.confirm({ select = true }),
+        ["<tab>"] = cmp.mapping.confirm({ select = true, }),
+        ["<C-Space>"] = cmp.mapping.complete(), -- Show complete
+        ["<C-j>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Select }),
+        ["<C-k>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Select }),
     }),
 })
 
