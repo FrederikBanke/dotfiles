@@ -43,6 +43,16 @@ pacman -S ripgrep # Arch
 brew install ripgrep # MacOS
 ```
 
+### prettier
+
+Support for projects using Prettier linting/formatting.
+
+```bash
+pacman -S prettierd # Arch
+
+brew install fsouza/prettierd/prettierd # MacOS
+```
+
 ### iTerm2
 
 On MacOS, the native terminal cannot use true colors. Instead, download iTerm2.
