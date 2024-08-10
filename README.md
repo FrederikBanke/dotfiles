@@ -24,6 +24,25 @@ pacman -S stow # Arch
 brew install stow # MacOS
 ```
 
+### Lazygit
+
+Git GUI for the terminal. I have an Nvim plugin using this.
+
+```bash
+pacman -S lazygit # Arch
+
+brew install jesseduffield/lazygit/lazygit # MacOS
+```
+### ripgrep
+
+A requirement for some Nvim plugins.
+
+```bash
+pacman -S ripgrep # Arch
+
+brew install ripgrep # MacOS
+```
+
 ### iTerm2
 
 On MacOS, the native terminal cannot use true colors. Instead, download iTerm2.
