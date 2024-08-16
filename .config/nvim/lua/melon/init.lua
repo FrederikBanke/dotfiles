@@ -1,3 +1,3 @@
 require("melon.set")
 require("melon.remap")
-vim.cmd("language en_US")
+vim.cmd("language en_US.UTF-8")
