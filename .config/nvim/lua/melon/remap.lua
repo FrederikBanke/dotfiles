@@ -1,4 +1,5 @@
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, { desc = "View directory files (:Ex)" })
+-- vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, { desc = "View directory files (:Ex)" })
+vim.keymap.set("n", "<leader>pv", ":Telescope file_browser path=%:p:h select_buffer=true<CR>", { desc = "View directory files (:Ex)" })
 
 -- Move lines in visual mode.
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
