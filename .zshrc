@@ -72,3 +72,7 @@ zinit light Aloxaf/fzf-tab
 # Load completions
 autoload -U compinit && compinit
 
+# Add to PATH
+# Add cargo to path
+path+="$HOME/.cargo/bin"
+export PATH
