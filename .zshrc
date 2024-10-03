@@ -23,6 +23,8 @@ compinit
 
 # Setup ENVIRONMENT VARIABLES
 export XDG_CONFIG_HOME=~/.config
+export VISUAL=nvim
+export EDITOR=nvim
 
 # Init starship prompt. Configure look in ~/.config/starship.toml
 eval "$(starship init zsh)"
