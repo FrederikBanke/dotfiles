@@ -1,0 +1,48 @@
+# --------------------- #
+#    Generation File    #
+# --------------------- #
+
+# Other generation files to import. (Example: intensive_apps -> ~/.config/rebos/imports/intensive_apps.toml)
+imports = [
+    # "intensive_apps",
+]
+
+# Packages to be installed via the native package manager.
+[managers.system]
+items = [
+     "gamemode",
+     "git",
+     "github-cli",
+     "gpu-screen-recorder-git",
+     "gpu-screen-recorder-gtk-git",
+     "gpu-screen-recorder-notification",
+     "hyprland",
+     "kitty",
+     "lazygit",
+     "mangohud",
+     "neovim",
+     "prettierd",
+     "protonup-qt",
+     "ripgrep",
+     "starship",
+     "steam",
+     "stow",
+     "syncthing",
+     "ttf-hack-nerd",
+     "waybar",
+     "zen-browser-bin",
+     "zoxide",
+     "zsh",
+]
+
+# Packages to be installed via Flatpak.
+[managers.flatpak]
+items = [
+    # "com.github.tchx84.Flatseal",
+]
+
+# Packages to be installed via Cargo.
+[managers.cargo]
+items = [
+    # "bacon",
+]
