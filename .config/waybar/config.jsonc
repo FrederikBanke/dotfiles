@@ -1,0 +1,38 @@
+// Waybar config
+{
+    // General settings
+
+    // Position TOP
+    "layer": "top",
+    "margin-top": 10,
+    "margin-bottom": 0,
+    "margin-left": 10,
+    "margin-right": 10,
+
+    // Load modules
+    "include": ["~/.config/waybar/modules.json"],
+
+    // Module placement
+    "modules-left": [
+        "hyprland/window",
+    ],
+    "modules-center": [
+        "hyprland/workspaces",
+    ],
+    "modules-right": [
+        "tray",
+        "group/hardware",
+        "clock",
+        "custom/exit"
+    ],
+
+    // Group Hardware
+    "group/hardware": {
+        "orientation": "inherit",
+        "modules": [
+            "disk",
+            "cpu",
+            "memory"
+        ]
+    }
+}

@@ -1,0 +1,44 @@
+{
+    "hyprland/workspaces":{
+        "on-click": "activate",
+        "active-only": false,
+        "all-outputs": false, // Show workspaces from other montiors.
+        "format": "{icon}",
+        "format-icons": {
+            "urgent": "",
+            "active": "",
+            "default": "",
+        },
+        "persistent-workspaces": {
+            "*": 5
+        },
+    },
+    "hyprland/window": {
+        "max-length": 50
+    },
+
+    "clock": {
+        "format": "{:%a, %d. %b  %H:%M}",
+        "tooltip": false,
+    },
+
+    "cpu": {
+        "format": "/   {usage}% ",
+    },
+
+    "memory": {
+        "format": "/  {}% ",
+    },
+
+    "disk": {
+        "interval": 30,
+        "format": "  {percentage_used}% ",
+        "path": "/",
+    },
+    
+    "custom/exit": {
+        "format": "",
+        "on-click": "wlogout",
+        "tooltip": false,
+    },
+}

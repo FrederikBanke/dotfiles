@@ -1,0 +1,87 @@
+@import 'colors-waybar.css';
+/*
+ * Waybar general styling
+ */
+
+window#waybar {
+    background-color: rgba(0,0,0,0.8);
+    border-bottom: 0px solid #ffffff;
+    /* color: #FFFFFF; */
+    background: transparent;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+/*
+ * Workspaces
+ */
+
+#workspaces {
+    background-color: rgba(255,255,255,0.8);
+    margin: 5px 5px 5px 5px;
+    padding: 4px 1px;
+    border-radius: 12px;
+    font-weight: normal;
+    font-style: normal;
+    /*opacity: 0.8;*/
+}
+
+#workspaces button {
+    padding: 0px 10px;
+    margin: 0px 3px;
+    border-radius: 12px;
+    color: @color11; 
+    background-color: @color11;
+    transition: all 0.3s ease-in-out;
+    opacity: 0.4;
+    font-size: 13px;
+}
+
+#workspaces button.active {
+    border-radius: 10px;
+    color: @color11; 
+    background-color: @color11;
+    transition: all 0.3s ease-in-out;
+    opacity: 1.0;
+    min-width: 30px;
+    background-size: 400% 400%;
+}
+
+#workspaces button:hover {
+    border-radius: 10px;
+    color: #FFFFFF; 
+    background-color: @color1;
+    min-width: 30px;
+    background-size: 400% 400%;
+}
+
+/*
+ * Custom exit module
+ */
+#custom-exit {
+    margin: 0px 13px 0px 0px;
+    padding: 0px;
+    font-size: 20px;
+    color: #FFF;
+    opacity: 0.8;
+}
+
+/*
+ * Clock
+ */
+#clock {
+    background-color: @background;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 15px;
+    padding: 1px 10px 0px 10px;
+    margin: 3px 5px 3px 5px;
+    opacity:0.8;
+    border:3px solid #fff;   
+}
+
+#hardware {
+    background-color: rgba(255,255,255,0.1);
+    padding: 0px 5px;
+    border-radius: 9999px;
+}

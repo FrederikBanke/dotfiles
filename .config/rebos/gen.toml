@@ -33,6 +33,8 @@ items = [
      "zen-browser-bin",
      "zoxide",
      "zsh",
+     "pywal",
+     "pywalfox",
 ]
 
 # Packages to be installed via Flatpak.
