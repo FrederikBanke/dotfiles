@@ -72,5 +72,40 @@ the use GNU stow to create symlinks
 stow .
 ```
 
+## Preferences
 
+These are just some small changes/quality of life improvements that I like to have on my system.
+
+### Map CAPS lock to CTRL and ESCAPE
+Will map the Caps lock key to CTRL when held and ESCAPE when pressed.
+
+```bash
+pacman -S keyd # Arch
+
+sudo systemctl enable keyd # Enable the daemon
+```
+
+Change (or add) the config file at `/etc/keyd/default.conf`:
+
+```conf
+[ids]
+
+*
+
+[main]
+
+# Maps capslock to escape when pressed and control when held.
+capslock = overload(control, esc)
+
+# Remaps the escape key to capslock
+# esc = capslock
+```
+
+Monitor keys with `keyd monitor` to get the names.
+
+Reload the config with `sudo keyd reload`.
+
+Stop den daemon with by pressing `backspace+escape+enter`.
+
+On **MacOS** this can be done with Karabiner.
 
