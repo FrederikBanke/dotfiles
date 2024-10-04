@@ -35,6 +35,7 @@ items = [
      "zsh",
      "pywal",
      "pywalfox",
+     "teamspeak3",
 ]
 
 # Packages to be installed via Flatpak.
