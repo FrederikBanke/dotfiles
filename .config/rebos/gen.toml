@@ -13,9 +13,11 @@ imports = [
 [managers.system]
 items = [
      "bat",
+     "figlet",
      "flatpak",
      "git",
      "github-cli",
+     "gum",
      "keyd",
      "kitty",
      "ripgrep",
@@ -23,6 +25,7 @@ items = [
      "stow",
      "syncthing",
      "teamspeak3",
+     "timeshift",
      "ttf-hack-nerd",
      "zen-browser-bin",
      "zoxide",
