@@ -76,7 +76,7 @@ stow .
 
 These are just some small changes/quality of life improvements that I like to have on my system.
 
-### Map CAPS lock to CTRL and ESCAPE
+### Remap keyboard keys
 Will map the Caps lock key to CTRL when held and ESCAPE when pressed.
 
 ```bash
@@ -99,6 +99,10 @@ capslock = overload(control, esc)
 
 # Remaps the escape key to capslock
 # esc = capslock
+
+# Remap ½ to $
+# This one is for Nordic Windows keyboards. Adds $ to the same place as it is on a MacOS keyboad.
+` = macro(G-4)
 ```
 
 Monitor keys with `sudo keyd monitor` to get the names.
