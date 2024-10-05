@@ -27,6 +27,7 @@ items = [
      "teamspeak3",
      "timeshift",
      "ttf-hack-nerd",
+     "xorg-xhost", # Could not open apps requiring passwd without this
      "zen-browser-bin",
      "zoxide",
      "zsh",
