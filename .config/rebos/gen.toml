@@ -5,6 +5,7 @@
 # Other generation files to import. (Example: intensive_apps -> ~/.config/rebos/imports/intensive_apps.toml)
 imports = [
      "code",
+     "fonts",
      "gaming",
      "hyprland",
 ]
@@ -27,7 +28,6 @@ items = [
      "syncthing",
      "teamspeak3",
      "timeshift",
-     "ttf-hack-nerd",
      "xorg-xhost", # Could not open apps requiring passwd without this
      "zen-browser-bin",
      "zoxide",

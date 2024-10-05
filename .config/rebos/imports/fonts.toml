@@ -1,0 +1,7 @@
+# Install fonts 
+[managers.system]
+items = [
+     "ttf-fira-mono",
+     "ttf-hack-nerd",
+     "ttf-material-symbols-variable-git",
+]
