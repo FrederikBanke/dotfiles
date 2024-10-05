@@ -4,7 +4,9 @@
 
 # Other generation files to import. (Example: intensive_apps -> ~/.config/rebos/imports/intensive_apps.toml)
 imports = [
-    # "intensive_apps",
+     "code",
+     "gaming",
+     "hyprland",
 ]
 
 # Packages to be installed via the native package manager.
@@ -12,30 +14,16 @@ imports = [
 items = [
      "bat",
      "flatpak",
-     "gamemode",
      "git",
      "github-cli",
-     "gpu-screen-recorder-git",
-     "gpu-screen-recorder-gtk-git",
-     "gpu-screen-recorder-notification",
-     "hyprland",
      "keyd",
      "kitty",
-     "lazygit",
-     "mangohud",
-     "neovim",
-     "prettierd",
-     "protonup-qt",
-     "python-pywal",
-     "python-pywalfox",
      "ripgrep",
      "starship",
-     "steam",
      "stow",
      "syncthing",
      "teamspeak3",
      "ttf-hack-nerd",
-     "waybar",
      "zen-browser-bin",
      "zoxide",
      "zsh",
@@ -44,7 +32,7 @@ items = [
 # Packages to be installed via Flatpak.
 [managers.flatpak]
 items = [
-    # "com.github.tchx84.Flatseal",
+    "com.discordapp.Discord",
 ]
 
 # Packages to be installed via Cargo.

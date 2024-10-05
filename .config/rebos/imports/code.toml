@@ -1,0 +1,7 @@
+# Install packages used for coding
+[managers.system]
+items = [
+     "lazygit",
+     "neovim",
+     "prettierd",
+]

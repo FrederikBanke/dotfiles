@@ -1,0 +1,14 @@
+# Install Hyprland and programs related to it
+[managers.system]
+items = [
+     "hyprcursor",
+     "hypridle",
+     "hyprland",
+     "hyprlock",
+     "hyprpaper",
+     "hyprutils",
+     "python-pywal",
+     "python-pywalfox",
+     "waybar",
+     "xdg-desktop-portal-hyprland",
+]

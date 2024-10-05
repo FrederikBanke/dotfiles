@@ -1,0 +1,11 @@
+# Install packages related to gaming 
+[managers.system]
+items = [
+     "gamemode",
+     "gpu-screen-recorder-git",
+     "gpu-screen-recorder-gtk-git",
+     "gpu-screen-recorder-notification",
+     "mangohud",
+     "protonup-qt",
+     "steam",
+]
