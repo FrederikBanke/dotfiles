@@ -20,6 +20,7 @@
         "hyprland/workspaces",
     ],
     "modules-right": [
+        "custom/updates",
         "tray",
         "group/hardware",
         "clock",

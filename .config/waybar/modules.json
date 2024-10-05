@@ -41,4 +41,15 @@
         "on-click": "wlogout",
         "tooltip": false,
     },
+
+    "custom/updates": {
+        "format": "  {}",
+        "tooltip-format": "{}",
+        "escape": true,
+        "return-type": "json",
+        "exec": "~/dotfiles/scripts/updates.sh",
+        "restart-interval": 3600,
+        "on-click": "kitty --hold ~/dotfiles/scripts/installupdates.sh",
+        "tooltip": false,
+    },
 }
