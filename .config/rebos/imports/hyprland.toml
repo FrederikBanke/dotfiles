@@ -1,12 +1,14 @@
 # Install Hyprland and programs related to it
 [managers.system]
 items = [
+     "dunst",
      "hyprcursor",
      "hypridle",
      "hyprland",
      "hyprlock",
      "hyprpaper",
      "hyprutils",
+     "polkit-kde-agent",
      "python-pywal",
      "python-pywalfox",
      "waybar",
