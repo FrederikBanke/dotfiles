@@ -10,6 +10,8 @@ imports = [
 # Packages to be installed via the native package manager.
 [managers.system]
 items = [
+     "bat",
+     "flatpak",
      "gamemode",
      "git",
      "github-cli",
@@ -17,25 +19,26 @@ items = [
      "gpu-screen-recorder-gtk-git",
      "gpu-screen-recorder-notification",
      "hyprland",
+     "keyd",
      "kitty",
      "lazygit",
      "mangohud",
      "neovim",
      "prettierd",
      "protonup-qt",
+     "python-pywal",
+     "python-pywalfox",
      "ripgrep",
      "starship",
      "steam",
      "stow",
      "syncthing",
+     "teamspeak3",
      "ttf-hack-nerd",
      "waybar",
      "zen-browser-bin",
      "zoxide",
      "zsh",
-     "python-pywal",
-     "python-pywalfox",
-     "teamspeak3",
 ]
 
 # Packages to be installed via Flatpak.

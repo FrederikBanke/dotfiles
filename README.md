@@ -101,7 +101,7 @@ capslock = overload(control, esc)
 # esc = capslock
 ```
 
-Monitor keys with `keyd monitor` to get the names.
+Monitor keys with `sudo keyd monitor` to get the names.
 
 Reload the config with `sudo keyd reload`.
 
