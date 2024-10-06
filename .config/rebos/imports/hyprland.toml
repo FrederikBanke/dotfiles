@@ -12,6 +12,5 @@ items = [
      "python-pywal",
      "python-pywalfox",
      "waybar",
-     "waypaper",
      "xdg-desktop-portal-hyprland",
 ]
