@@ -1,0 +1,5 @@
+# Install music packages
+[managers.system]
+items = [
+     "guitarix",
+]
