@@ -15,11 +15,13 @@ source "$HOME/.cache/wal/colors.sh"
 cp ~/.cache/wal/colors-waybar.css ~/dotfiles/.config/waybar/
 
 # Get wallpaper image name
-# wallpaper_name=$(echo $wallpaper | sed "s|$HOME/Sync/Desktop Wallpapers/||g")
+wallpaper_name=$(echo $wallpaper | sed "s|$HOME/Sync/Desktop Wallpapers/||g")
 
 # Set the new wallpaper
 hyprctl hyprpaper preload "$wallpaper" &
 hyprctl hyprpaper wallpaper ",$wallpaper" &
+
+notify-send "Wallpaper set to $wallpaper_name."
 
 # Reload waybar
 ~/dotfiles/.config/waybar/launch.sh
