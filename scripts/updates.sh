@@ -1,22 +1,46 @@
 # Script is from My Linux For Work
 
+cacheLocation=~/.cache/dotfiles/updatesscriptcache
+
+# Read from cache
+if [ ! -f $cacheLocation ]; then
+    mkdir -p ~/.cache/dotfiles
+    echo "0,0" > $cacheLocation
+fi
+cacheStr=$(<$cacheLocation)
+cache=(${cacheStr//,/ })
+cachedDate="${cache[0]}"
+cachedUpdates="${cache[1]}"
+now=$(date +%s)
+diff=$(($now - $cachedDate))
+
 # Define thresholds for color indicators
 threshold_green=0
 threshold_yellow=25
 threshold_red=100
 
-# Calculate available updates (with trizen)
-# Check updates for main arch packages
-if ! updates_arch=$(checkupdates 2> /dev/null | wc -l); then
-    updates_arch=0
-fi
-# Check updates for AUR packages
-if ! updates_aur=$(yay -Qu --aur --quiet | wc -l); then
-    updates_aur=0
-fi
+if (( diff < 60 )); then
+    # Use cached number.
+    notify-send "Using cached update data"
+    updates=$cachedUpdates
+else
+    notify-send "Check for updates"
+    # Calculate available updates
+    # Check updates for main arch packages
+    if ! updates_arch=$(checkupdates 2> /dev/null | wc -l); then
+        updates_arch=0
+    fi
+    # Check updates for AUR packages
+    if ! updates_aur=$(yay -Qu --aur --quiet | wc -l); then
+        updates_aur=0
+    fi
 
-# Compute total updates
-updates=$(("$updates_arch" + "$updates_aur"))
+    # Compute total updates
+    updates=$(("$updates_arch" + "$updates_aur"))
+
+    # Save in cache
+    echo "$(date +%s),$updates" > $cacheLocation
+fi
 
 # Testing
 
