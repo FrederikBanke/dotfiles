@@ -20,8 +20,11 @@
         "hyprland/workspaces",
     ],
     "modules-right": [
-        "custom/updates",
+        "privacy",
         "tray",
+        "custom/updates",
+        "pulseaudio",
+        "network",
         "group/hardware",
         "clock",
         "custom/exit"
