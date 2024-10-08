@@ -77,7 +77,11 @@ require('mason').setup({})
 require('mason-lspconfig').setup({
     handlers = {
         function(server_name)
-            require('lspconfig')[server_name].setup({})
+            -- Without this, some props where not showing up in autocompletions for React.
+            local capabilities = require("cmp_nvim_lsp").default_capabilities()
+            require('lspconfig')[server_name].setup({
+                capabilities = capabilities,
+            })
         end,
     },
 })
