@@ -15,6 +15,7 @@ imports = [
 items = [
      "anyrun-git",
      "bat",
+     "btop",
      "figlet",
      "flatpak",
      "git",
