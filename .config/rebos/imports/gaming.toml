@@ -5,8 +5,8 @@ items = [
      "gpu-screen-recorder-git",
      "gpu-screen-recorder-gtk-git",
      "gpu-screen-recorder-notification",
+     "lizardbyte/sunshine",
      "mangohud",
      "protonup-qt",
      "steam",
-     "sunshine",
 ]
