@@ -64,7 +64,9 @@ fi
 source "${ZINIT_HOME}/zinit.zsh"
 
 # Apply colors from pywal to new terminals
-(cat ~/.cache/wal/sequences &)
+if [ -f "~/.cache/wal/sequences" ]; then
+    (cat ~/.cache/wal/sequences &)
+fi
 
 # Add in zsh plugins
 zinit light zsh-users/zsh-syntax-highlighting
