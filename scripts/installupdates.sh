@@ -28,12 +28,19 @@ _isInstalledAUR() {
 # Confirm Start
 # ------------------------------------------------------
 
+# Print available updates
+gum format -- "# System updates"
+checkupdates
+gum format -- "# AUR updates"
+$aur_helper -Qau
+
 if gum confirm "DO YOU WANT TO START THE UPDATE NOW?" ;then
     echo 
     echo ":: Update started."
 elif [ $? -eq 130 ]; then
         exit 130
 else
+    clear
     echo
     echo ":: Update canceled."
     exit;
