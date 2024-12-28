@@ -1,0 +1,12 @@
+theme=rose-pine-moon
+background=#15191e
+foreground=#dbdbdb
+background-opacity=0.8
+background-blur-radius=20
+
+bold-is-bright=true
+
+window-colorspace=display-p3
+
+# MacOS settings
+macos-titlebar-style=tabs
