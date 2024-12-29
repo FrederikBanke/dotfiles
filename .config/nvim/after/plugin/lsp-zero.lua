@@ -16,6 +16,10 @@ lsp_zero.on_attach(function(client, bufnr)
         function() vim.diagnostic.goto_next({ severity = { min = vim.diagnostic.severity.INFO } }) end, opts)
     vim.keymap.set("n", "<C-,>",
         function() vim.diagnostic.goto_prev({ severity = { min = vim.diagnostic.severity.INFO } }) end, opts)
+    vim.keymap.set("n", "<C-S-.>",
+        function() vim.diagnostic.goto_next() end, opts)
+    vim.keymap.set("n", "<C-S-,>",
+        function() vim.diagnostic.goto_prev() end, opts)
     vim.keymap.set("n", "<leader>vca", function() vim.lsp.buf.code_action() end, h.merge(opts, {
         desc =
         "Show code actions"
