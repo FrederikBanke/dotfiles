@@ -8,5 +8,10 @@ bold-is-bright=true
 
 window-colorspace=display-p3
 
+title=Ghostty
+
 # MacOS settings
 macos-titlebar-style=tabs
+
+# Linux Settings
+gtk-titlebar=false
