@@ -57,6 +57,18 @@ require('lspconfig').lua_ls.setup({
     end,
 })
 
+require('lspconfig').tailwindCSS.setup({
+    settings = {
+        tailwindCSS = {
+            experimental = {
+                classRegex = {
+                    { ".+: ([\"'`][^\"'`]*.*?[\"'`])", ".+: [\"'`]([^\"'`]*).*?[\"'`]" }
+                },
+            },
+        },
+    },
+})
+
 -- Extend cmp (autocompletions) settings.
 cmp.setup({
     sources = {
