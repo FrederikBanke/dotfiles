@@ -74,7 +74,7 @@
         "return-type": "json",
         "exec": "~/dotfiles/scripts/updates.sh",
         "restart-interval": 3600,
-        "on-click": "kitty --hold ~/dotfiles/scripts/installupdates.sh",
+        "on-click": "ghostty -e ~/dotfiles/scripts/installupdates.sh",
         "tooltip": false,
     },
 }
