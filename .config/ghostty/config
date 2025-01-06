@@ -10,6 +10,11 @@ window-colorspace=display-p3
 
 title=Ghostty
 
+# Disable ligatures
+font-feature=-calt
+font-feature=-liga
+font-feature=-dlig
+
 # MacOS settings
 macos-titlebar-style=tabs
 
