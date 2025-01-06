@@ -20,4 +20,7 @@ vim.opt.signcolumn = "yes"
 
 vim.opt.updatetime = 50
 
+-- Allow local project setting files.
+vim.cmd("set exrc")
+
 vim.g.mapleader = " "
