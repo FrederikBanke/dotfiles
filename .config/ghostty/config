@@ -23,6 +23,7 @@ cursor-style-blink=true
 
 # MacOS settings
 macos-titlebar-style=tabs
+macos-non-native-fullscreen=false
 
 # Linux Settings
 gtk-titlebar=false
