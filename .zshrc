@@ -88,7 +88,12 @@ export PATH
 
 # Load NVM
 export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
+# Check which OS. Darwin is MacOS.
+if [[ $(uname) == "Darwin" ]]; then
+    source $(brew --prefix nvm)/nvm.sh
+else
+    source /usr/share/nvm/init-nvm.sh
+fi
 
 # place this after nvm initialization!
 autoload -U add-zsh-hook
