@@ -53,9 +53,29 @@ pacman -S prettierd # Arch
 brew install fsouza/prettierd/prettierd # MacOS
 ```
 
-### iTerm2
+### MacOS specifics
 
-On MacOS, the native terminal cannot use true colors. Instead, download iTerm2.
+These are apps I only use, or are only on, MacOS.
+
+#### SketchyBar
+
+> A highly customizable macOS status bar replacement.
+
+[Github](https://github.com/FelixKratz/SketchyBar?tab=readme-ov-file)
+
+Needs the setting "Displays have separate Spaces" to be turned on, on MacOS.
+
+And hide the native status bar.
+
+```bash
+brew tap FelixKratz/formulae
+brew install sketchybar
+
+# Set startup service
+brew services start sketchybar
+# Install the font used by sketchybar
+brew install --cask font-hack-nerd-font
+```
 
 ## Installation
 
