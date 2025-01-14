@@ -19,8 +19,7 @@ do
     label.y_offset=-1
     background.color=$BACKGROUND_1
     background.border_color=$BACKGROUND_2
-    script="$PLUGIN_DIR/space.sh"
-    # script="$CONFIG_DIR/plugins/aerospace.sh $sid"
+    script="$CONFIG_DIR/plugins/aerospace.sh $sid"
     click_script="aerospace workspace $sid"
   )
 
