@@ -47,6 +47,7 @@ brew install tailscale
 brew install zoxide
 brew install jq
 brew install switchaudio-osx
+brew install borders
 
 # Brew install casks. Casks are apps with a GUI
 echo "Installing brew casks..."
@@ -55,11 +56,14 @@ brew install --cask ghostty
 brew install --cask --no-quarantine zen-browser
 brew install --cask wireshark
 brew install --cask sf-symbols
+brew install --cask nikitabobko/tap/aerospace
 
 # MacOS settings
 echo "Changing MacOS default settings..."
 defaults write com.apple.spaces spans-displays -bool false
 defaults write com.apple.dock autohide -bool true
+defaults write com.apple.dock expose-group-apps -bool true && killall Dock
+defaults write -g NSWindowShouldDragOnGesture -bool true # Allows dragging windows with ctrl + cmd in Aerospace
 
 # Install Sketchybar app font
 curl -L https://github.com/kvndrsslr/sketchybar-app-font/releases/download/v1.0.4/sketchybar-app-font.ttf -o $HOME/Library/Fonts/sketchybar-app-font.ttf

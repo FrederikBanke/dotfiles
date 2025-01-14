@@ -57,6 +57,12 @@ brew install fsouza/prettierd/prettierd # MacOS
 
 These are apps I only use, or are only on, MacOS.
 
+#### AeroSpace
+
+A tiling manager for MacOS.
+
+[Github](https://github.com/nikitabobko/AeroSpace)
+
 #### SketchyBar
 
 > A highly customizable macOS status bar replacement.
