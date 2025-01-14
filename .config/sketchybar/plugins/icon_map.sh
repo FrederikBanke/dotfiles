@@ -14,6 +14,9 @@ function icon_map() {
   "kitty")
     icon_result=":kitty:"
     ;;
+  "Ghostty")
+    icon_result=":ghostty:"
+    ;;
   "ClickUp")
     icon_result=":click_up:"
     ;;
@@ -245,6 +248,9 @@ function icon_map() {
   "Canary Mail" | "HEY" | "Mail" | "Mailspring" | "MailMate" | "邮件")
     icon_result=":mail:"
     ;;
+  "Microsoft Outlook")
+    icon_result=":microsoft_outlook:"
+    ;;
   "Default")
     icon_result=":default:"
     ;;
@@ -472,6 +478,9 @@ function icon_map() {
     ;;
   "Firefox")
     icon_result=":firefox:"
+    ;;
+  "Zen Browser")
+    icon_result=":zen_browser:"
     ;;
   "WezTerm")
     icon_result=":wezterm:"

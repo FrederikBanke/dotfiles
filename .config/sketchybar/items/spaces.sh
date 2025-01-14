@@ -1,19 +1,12 @@
 #!/bin/bash
 
-SPACE_ICONS=("1" "2" "3" "4" "5" "6" "7" "8" "9" "10" "11" "12")
+SPACE_ICONS=("1" "2" "3" "4" "5" "6" "7" "S")
 
-# Destroy space on right click, focus space on left click.
-# New space by left clicking separator (>)
-
-sid=0
-spaces=()
-for i in "${!SPACE_ICONS[@]}"
+for sid in $(aerospace list-workspaces --all);
 do
-  sid=$(($i+1))
-
   space=(
-    space=$sid
-    icon="${SPACE_ICONS[i]}"
+    space=1
+    icon="${SPACE_ICONS[sid-1]}"
     icon.padding_left=10
     icon.padding_right=10
     padding_left=2
@@ -27,11 +20,13 @@ do
     background.color=$BACKGROUND_1
     background.border_color=$BACKGROUND_2
     script="$PLUGIN_DIR/space.sh"
+    # script="$CONFIG_DIR/plugins/aerospace.sh $sid"
+    click_script="aerospace workspace $sid"
   )
 
-  sketchybar --add space space.$sid left    \
+  sketchybar --add item space.$sid left    \
              --set space.$sid "${space[@]}" \
-             --subscribe space.$sid mouse.clicked
+             --subscribe space.$sid aerospace_workspace_change
 done
 
 space_creator=(
@@ -41,7 +36,7 @@ space_creator=(
   padding_right=8
   label.drawing=off
   display=active
-  click_script='yabai -m space --create'
+  click_script='aerospace workspace next --wrap-around'
   script="$PLUGIN_DIR/space_windows.sh"
   icon.color=$WHITE
 )
