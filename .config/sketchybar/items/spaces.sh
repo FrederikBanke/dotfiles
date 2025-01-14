@@ -4,6 +4,9 @@ SPACE_ICONS=("1" "2" "3" "4" "5" "6" "7" "S")
 
 for sid in $(aerospace list-workspaces --all);
 do
+  if [ $sid == "S" ]; then
+      continue
+  fi
   space=(
     space=1
     icon="${SPACE_ICONS[sid-1]}"

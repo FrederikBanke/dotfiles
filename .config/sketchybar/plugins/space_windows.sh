@@ -4,6 +4,9 @@ if [ "$SENDER" = "space_windows_change" ]; then
   for sid in $(aerospace list-workspaces --all);
   do
     space=$sid
+    if [ $sid == "S" ]; then
+        continue
+    fi
     app_count="$(echo $(aerospace list-windows --workspace $space --count))"
     icon_strip=" "
     if [ "${app_count}" != "0" ]; then
