@@ -176,3 +176,7 @@ automatically-unhide-macos-hidden-apps = true
 if.app-id = 'company.thebrowser.Browser'
 if.window-title-regex-substring = 'Space 1'
 run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.finder'
+run = 'layout floating'
