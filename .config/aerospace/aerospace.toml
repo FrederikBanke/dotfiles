@@ -104,7 +104,7 @@ automatically-unhide-macos-hidden-apps = true
     end tell'
     '''
     # Close focused application
-    alt-c = 'close'
+    alt-c = ['close', 'focus left']
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#layout
     alt-slash = 'layout tiles horizontal vertical'
