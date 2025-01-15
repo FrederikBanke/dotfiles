@@ -1,2 +1,3 @@
 .zshrc.*
 .config/waybar/colors-waybar.css
+.DS_Store
