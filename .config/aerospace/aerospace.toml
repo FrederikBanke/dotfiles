@@ -111,10 +111,6 @@ automatically-unhide-macos-hidden-apps = true
     alt-comma = 'layout accordion horizontal vertical'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#focus
-    cmd-h = 'focus left'
-    cmd-j = 'focus down'
-    cmd-k = 'focus up'
-    cmd-l = 'focus right'
     alt-h = 'focus left'
     alt-j = 'focus down'
     alt-k = 'focus up'
