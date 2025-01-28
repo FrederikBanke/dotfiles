@@ -46,6 +46,7 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath' # Add interac
 alias set-screen-60hz="xrandr --output DP-0 --mode 2560x1440 --rate 60"
 alias set-screen-144hz="xrandr --output DP-0 --mode 2560x1440 --rate 144"
 alias ls='ls --color' # Always use colors for files and dirs
+alias lg='lazygit'
 
 # Shell integrations
 eval "$(fzf --zsh)"
