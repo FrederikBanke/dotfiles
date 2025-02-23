@@ -24,9 +24,13 @@ disabled = false
 
 [os.symbols]
 Arch = ""
+CachyOS = ""
+Debian = ""
 EndeavourOS = ""
+Linux = ""
 Macos = ""
 Raspbian = ""
+Ubuntu = ""
 Windows = "󰍲 "
 
 [directory]
