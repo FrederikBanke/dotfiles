@@ -24,4 +24,4 @@ hyprctl hyprpaper wallpaper ",$wallpaper" &
 notify-send "Wallpaper set to $wallpaper_name."
 
 # Reload waybar
-~/dotfiles/.config/waybar/launch.sh
+# ~/dotfiles/.config/waybar/launch.sh
