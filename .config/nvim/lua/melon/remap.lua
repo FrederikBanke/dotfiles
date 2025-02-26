@@ -9,3 +9,7 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set({ "n", "v" }, "-", "/")
 -- Map shift+æ to ; for easier access to commands.
 vim.cmd("set langmap=Æ:")
+
+-- Map H and L to switch tabs back and forth.
+vim.keymap.set("n", "H", "gT")
+vim.keymap.set("n", "L", "gt")
