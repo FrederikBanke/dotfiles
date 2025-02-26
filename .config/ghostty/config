@@ -15,6 +15,9 @@ font-feature=-calt
 font-feature=-liga
 font-feature=-dlig
 
+font-size=15
+window-inherit-font-size=false
+
 # Cursor styles
 cursor-style=block
 shell-integration-features=no-cursor
