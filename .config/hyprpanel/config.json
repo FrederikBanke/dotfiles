@@ -49,8 +49,10 @@
         "media"
       ],
       "right": [
+        "updates",
         "volume",
         "network",
+        "bluetooth",
         "systray",
         "clock",
         "notifications"
@@ -86,5 +88,8 @@
         "notifications"
       ]
     }
-  }
+  },
+  "theme.bar.buttons.modules.updates.enableBorder": false,
+  "bar.customModules.updates.autoHide": true,
+  "bar.customModules.updates.leftClick": "ghostty -e ~/scripts/installupdates.sh"
 }
