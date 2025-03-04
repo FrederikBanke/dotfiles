@@ -144,7 +144,8 @@ automatically-unhide-macos-hidden-apps = true
     alt-shift-4 = 'move-node-to-workspace 4'
     alt-shift-5 = 'move-node-to-workspace 5'
     alt-shift-6 = 'move-node-to-workspace 6'
-    alt-shift-7 = 'move-node-to-workspace 7'
+    # allows us to map alt-shift-7 to another sequence in karabiner, so we can still make a \. Remember to map alt-shift-7 to this sequence in karabiner.
+    alt-shift-cmd-7 = 'move-node-to-workspace 7'
     alt-shift-s = 'move-node-to-workspace S'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
