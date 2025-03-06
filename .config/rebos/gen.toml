@@ -22,6 +22,7 @@ items = [
      "git",
      "github-cli",
      "gum",
+     "kdenlive",
      "keyd",
      "kitty",
      "ripgrep",

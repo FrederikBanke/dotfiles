@@ -2,8 +2,8 @@
 [managers.system]
 items = [
      "gamemode",
-     "gpu-screen-recorder-git",
-     "gpu-screen-recorder-gtk-git",
+     "gpu-screen-recorder",
+     "gpu-screen-recorder-gtk",
      "gpu-screen-recorder-notification",
      "lizardbyte/sunshine-git",
      "mangohud",
