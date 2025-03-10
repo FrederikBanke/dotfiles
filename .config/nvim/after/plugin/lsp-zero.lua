@@ -57,7 +57,7 @@ require('lspconfig').lua_ls.setup({
     end,
 })
 
-require('lspconfig').tailwindCSS.setup({
+require('lspconfig').tailwindcss.setup({
     settings = {
         tailwindCSS = {
             experimental = {
