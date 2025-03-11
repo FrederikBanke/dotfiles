@@ -14,6 +14,11 @@ setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
 
+# Load MacOS specific shell.
+if [[ $(uname) == "Darwin" ]]; then
+    [ -f .macrc ] && source .macrc
+fi
+
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/banke/.zshrc'
 
