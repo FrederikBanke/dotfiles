@@ -1,6 +1,9 @@
 #!/bin/bash
 
-SPACE_ICONS=("1" "2" "3" "4" "5" "6" "7" "S")
+# We need to add this to create padding for the spaces bracket.
+sketchybar --add item space.left left\
+           --set space.left background.drawing=off \
+                            width=4
 
 for sid in $(aerospace list-workspaces --all);
 do
@@ -9,19 +12,19 @@ do
   fi
   space=(
     space=1
-    icon="${SPACE_ICONS[sid-1]}"
-    icon.padding_left=10
-    icon.padding_right=10
+    icon.padding_left=5
+    icon.padding_right=5
     padding_left=2
     padding_right=2
-    label.padding_right=20
     icon.highlight_color=$RED
     label.color=$GREY
     label.highlight_color=$WHITE
     label.font="sketchybar-app-font:Regular:16.0"
     label.y_offset=-1
-    background.color=$BACKGROUND_1
-    background.border_color=$BACKGROUND_2
+    background.color=$BACKGROUND_2
+    background.drawing=on
+    background.corner_radius=100
+    background.height=15
     script="$CONFIG_DIR/plugins/aerospace.sh $sid"
     click_script="aerospace workspace $sid"
   )
@@ -31,6 +34,11 @@ do
              --subscribe space.$sid aerospace_workspace_change
 done
 
+# The right padding for spaces bracket.
+sketchybar --add item space.right left\
+           --set space.right background.drawing=off \
+                             width=10
+
 space_creator=(
   icon=􀆊
   icon.font="$FONT:Heavy:16.0"
@@ -39,10 +47,8 @@ space_creator=(
   label.drawing=off
   display=active
   click_script='aerospace workspace next --wrap-around'
-  script="$PLUGIN_DIR/space_windows.sh"
   icon.color=$WHITE
 )
 
-sketchybar --add item space_creator left               \
-           --set space_creator "${space_creator[@]}"   \
-           --subscribe space_creator space_windows_change
+# sketchybar --add item space_creator left               \
+#            --set space_creator "${space_creator[@]}"
