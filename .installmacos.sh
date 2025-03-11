@@ -32,6 +32,7 @@ brew install fsouza/prettierd/prettierd
 brew install fzf
 brew install gh
 brew install grep
+brew install jesseduffield/lazydocker/lazydocker
 brew install jesseduffield/lazygit/lazygit
 brew install nvim
 brew install nvm
