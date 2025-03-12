@@ -23,6 +23,7 @@ cursor-style=block
 shell-integration-features=no-cursor
 cursor-color=#cecece
 cursor-style-blink=true
+mouse-hide-while-typing=true
 
 # MacOS settings
 macos-titlebar-style=tabs
