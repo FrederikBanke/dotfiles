@@ -18,7 +18,8 @@ vim.opt.termguicolors = true
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
 
-vim.opt.updatetime = 50
+vim.opt.updatetime = 1000
+vim.opt.timeoutlen = 300
 
 -- Allow local project setting files.
 vim.cmd("set exrc")
