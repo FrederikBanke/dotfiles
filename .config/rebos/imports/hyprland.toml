@@ -8,6 +8,7 @@ items = [
      "hyprland",
      "hyprlock",
      "hyprpaper",
+     "hyprshot",
      "hyprutils",
      "polkit-kde-agent",
      "python-pywal",
