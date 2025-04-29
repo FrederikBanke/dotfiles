@@ -26,7 +26,7 @@ cursor-style-blink=true
 mouse-hide-while-typing=true
 
 # MacOS settings
-macos-titlebar-style=tabs
+macos-titlebar-style=hidden
 macos-non-native-fullscreen=false
 
 # Linux Settings
