@@ -1,22 +1,34 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
 format = """
-[░▒▓](#a3aed2)\
-[ $os ](bg:#a3aed2 fg:#090c0c)\
-[](bg:#769ff0 fg:#a3aed2)\
+[▓](overlay)\
+$username\
+[ $os ](bg:overlay fg:iris)\
+[](fg:overlay) \
 $directory\
-[](fg:#769ff0 bg:#394260)\
 $git_branch\
 $git_status\
-[](fg:#394260 bg:#212736)\
 $nodejs\
 $rust\
 $golang\
 $php\
-[](fg:#212736 bg:#1d2230)\
+$fill\
 $time\
-[ ](fg:#1d2230)\
-\n$character"""
+\n$character(fg:rose)"""
 
 add_newline = true
+
+palette = "rose-pine"
+
+[palettes.rose-pine]
+overlay = "#26233a"
+love = "#eb6f92"
+gold = "#f6c177"
+rose = "#ebbcba"
+pine = "#31748f"
+foam = "#9ccfd8"
+iris = "#c4a7e7"
 
 [os]
 format = "$symbol"
@@ -34,8 +46,8 @@ Ubuntu = ""
 Windows = "󰍲 "
 
 [directory]
-style = "fg:#e3e5e5 bg:#769ff0"
-format = "[ $path ]($style)"
+style = "bg:overlay fg:rose"
+format = "[](fg:overlay)[$path]($style)[](fg:overlay) "
 truncation_length = 3
 truncation_symbol = "…/"
 
@@ -47,17 +59,34 @@ truncation_symbol = "…/"
 
 [git_branch]
 symbol = ""
-style = "bg:#394260"
-format = '[[ $symbol $branch ](fg:#769ff0 bg:#394260)]($style)'
+style = "bg:overlay fg:foam"
+format = "[](fg:overlay)[$symbol $branch ]($style)"
+truncation_length = 30
+truncation_symbol = "…/"
 
 [git_status]
-style = "bg:#394260"
-format = '[[($all_status$ahead_behind )](fg:#769ff0 bg:#394260)]($style)'
+disabled = false
+style = "bg:overlay fg:love"
+format = '([$all_status$ahead_behind]($style))[](fg:overlay) '
+up_to_date = '[ ✓ ](bg:overlay fg:iris)'
+untracked = '[?](bg:overlay fg:gold)'
+stashed = '[\$](bg:overlay fg:iris)'
+modified = '[!](bg:overlay fg:gold)'
+renamed = '[»](bg:overlay fg:iris)'
+deleted = '[✘](style)'
+staged = '[++](bg:overlay fg:gold)'
+ahead = '[⇡](bg:overlay fg:foam)'
+diverged = '⇕[\[](bg:overlay fg:iris)[⇡](bg:overlay fg:foam)[⇣](bg:overlay fg:rose)[\]](bg:overlay fg:iris)'
+behind = '[⇣](bg:overlay fg:rose)'
+
+[fill]
+style = "fg:overlay"
+symbol = " "
 
 [nodejs]
 symbol = ""
-style = "bg:#212736"
-format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+style = "bg:overlay"
+format = '[](fg:overlay)[[$symbol ($version)](fg:foam bg:overlay)]($style)[](fg:overlay) '
 
 [rust]
 symbol = ""
@@ -76,6 +105,7 @@ format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
 
 [time]
 disabled = false
-time_format = "%R" # Hour:Minute Format
-style = "bg:#1d2230"
-format = '[[ 󰥔 $time ](fg:#a0a9cb bg:#1d2230)]($style)'
+time_format = "%R"           # Hour:Minute Format
+style = "bg:overlay fg:rose"
+#format = '[[ 󰥔 $time ](fg:#a0a9cb bg:#1d2230)]($style)'
+format = " [](fg:overlay)[ $time 󰥔 ]($style)[](fg:overlay)"
