@@ -26,8 +26,10 @@ lualine.setup({
         lualine_b = {
             { 'branch', fmt = trunc(100, 10, nil, false, 50) },
             'diff',
+            'filename',
             'diagnostics',
         },
+        lualine_c = {},
         lualine_x = {
             {
                 noice.api.status.mode.get,
