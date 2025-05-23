@@ -29,6 +29,7 @@ items = [
      "losslesscut-bin",
      "mpv",
      "ripgrep",
+     "solaar",
      "starship",
      "stow",
      "syncthing",
