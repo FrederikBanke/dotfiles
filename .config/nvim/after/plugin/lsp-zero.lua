@@ -84,7 +84,8 @@ vim.lsp.config('lua_ls', {
     }
 })
 
-require('lspconfig').tailwindcss.setup({
+vim.lsp.enable("tailwindcss")
+vim.lsp.config("tailwindcss", {
     settings = {
         tailwindCSS = {
             experimental = {
