@@ -50,12 +50,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		end, opts)
 		vim.keymap.set({ "n", "x" }, "gq", function()
 			conform.format({ async = true })
-			vim.lsp.buf.code_action({
-				filter = function(code_action)
-					return string.find(code_action.title, "Organize Imports") ~= nil
-				end,
-				apply = true,
-			})
 			-- vim.lsp.buf.format({ async = false, timeout_ms = 10000 })
 		end, h.merge(opts, { desc = "Format file" }))
 	end,
