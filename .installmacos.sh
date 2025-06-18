@@ -24,6 +24,7 @@ brew tap zen-browser/desktop
 # Brew install formulae
 echo "Installing brew formulae..."
 brew install bat
+brew install borders
 brew install btop
 brew install bun
 brew install cloudfoundry/tap/cf-cli@8
@@ -34,6 +35,8 @@ brew install gh
 brew install grep
 brew install jesseduffield/lazydocker/lazydocker
 brew install jesseduffield/lazygit/lazygit
+brew install jq
+brew install lua-language-server
 brew install nvim
 brew install nvm
 brew install oven-sh/bun/bun
@@ -44,11 +47,9 @@ brew install sketchybar
 brew install speedtest
 brew install starship
 brew install stow
+brew install switchaudio-osx
 brew install tailscale
 brew install zoxide
-brew install jq
-brew install switchaudio-osx
-brew install borders
 
 # Brew install casks. Casks are apps with a GUI
 echo "Installing brew casks..."
@@ -58,6 +59,7 @@ brew install --cask --no-quarantine zen-browser
 brew install --cask wireshark
 brew install --cask sf-symbols
 brew install --cask nikitabobko/tap/aerospace
+brew install --cask mos
 
 # MacOS settings
 echo "Changing MacOS default settings..."
