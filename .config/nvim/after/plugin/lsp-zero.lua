@@ -33,8 +33,10 @@ lsp_zero.on_attach(function(client, bufnr)
     end, h.merge(opts, { desc = "Format file" }))
 end)
 
+-- Enable language servers
+vim.lsp.enable({ "lua_ls", "tailwindcss", "biome" })
+
 -- Set global variable 'vim' for lua files.
-vim.lsp.enable("lua_ls")
 vim.lsp.config('lua_ls', {
     on_init = function(client)
         if client.workspace_folders then
@@ -84,7 +86,6 @@ vim.lsp.config('lua_ls', {
     }
 })
 
-vim.lsp.enable("tailwindcss")
 vim.lsp.config("tailwindcss", {
     settings = {
         tailwindCSS = {
