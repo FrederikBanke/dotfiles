@@ -8,41 +8,41 @@ local noice = require("noice")
 --- @param max_len number the max length a text can be, regardless of window size
 --- return function that can format the component accordingly
 local function trunc(trunc_width, trunc_len, hide_width, no_ellipsis, max_len)
-    return function(str)
-        local win_width = vim.fn.winwidth(0)
-        if hide_width and win_width < hide_width then
-            return ''
-        elseif trunc_width and trunc_len and win_width < trunc_width and #str > trunc_len then
-            return str:sub(1, trunc_len) .. (no_ellipsis and '' or '...')
-        elseif #str > max_len then
-            return str:sub(1, max_len) .. (no_ellipsis and '' or '...')
-        end
-        return str
-    end
+	return function(str)
+		local win_width = vim.fn.winwidth(0)
+		if hide_width and win_width < hide_width then
+			return ""
+		elseif trunc_width and trunc_len and win_width < trunc_width and #str > trunc_len then
+			return str:sub(1, trunc_len) .. (no_ellipsis and "" or "...")
+		elseif #str > max_len then
+			return str:sub(1, max_len) .. (no_ellipsis and "" or "...")
+		end
+		return str
+	end
 end
 
 lualine.setup({
-    sections = {
-        lualine_b = {
-            { 'branch', fmt = trunc(100, 10, nil, false, 50) },
-            'diff',
-            'filename',
-            'diagnostics',
-        },
-        lualine_c = {},
-        lualine_x = {
-            {
-                noice.api.status.mode.get,
-                -- cond = noice.api.statusline.mode.has,
-                cond = function()
-                    local reg = vim.fn.reg_recording()
-                    return reg ~= ""
-                end,
-                color = { fg = "#ff9e64" },
-            },
-            'encoding',
-            'fileformat',
-            'filetype',
-        },
-    },
+	sections = {
+		lualine_b = {
+			{ "branch", fmt = trunc(100, 10, nil, false, 50) },
+			"diff",
+			"filename",
+			"diagnostics",
+		},
+		lualine_c = {},
+		lualine_x = {
+			{
+				noice.api.status.mode.get,
+				-- cond = noice.api.statusline.mode.has,
+				cond = function()
+					local reg = vim.fn.reg_recording()
+					return reg ~= ""
+				end,
+				color = { fg = "#ff9e64" },
+			},
+			"encoding",
+			"fileformat",
+			"filetype",
+		},
+	},
 })

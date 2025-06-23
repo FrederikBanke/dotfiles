@@ -1,5 +1,5 @@
 return {
---	"xiyaowong/transparent.nvim",
+	--	"xiyaowong/transparent.nvim",
 	{ "rose-pine/neovim", name = "rose-pine" },
-	{ "folke/tokyonight.nvim", name = "tokyonight" }
+	{ "folke/tokyonight.nvim", name = "tokyonight" },
 }
