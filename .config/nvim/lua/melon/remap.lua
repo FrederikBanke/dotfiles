@@ -21,3 +21,6 @@ vim.keymap.set("n", "L", "gt")
 -- Move tabs left and right
 vim.keymap.set("n", "<CS-H>", ":tabm -1<CR>")
 vim.keymap.set("n", "<CS-L>", ":tabm +1<CR>")
+
+-- Map Ctrl-j to enter. Useful when entering a command.
+vim.keymap.set({ "i" }, "<C-j>", "<CR>")
