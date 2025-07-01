@@ -31,8 +31,20 @@ export XDG_CONFIG_HOME=~/.config
 export VISUAL=nvim
 export EDITOR=nvim
 
-# Init starship prompt. Configure look in ~/.config/starship.toml
-eval "$(starship init zsh)"
+# Source files
+# Load the 'init.sh'. Place stuff that must be loaded before other things in here.
+source ~/zshrc/init.sh
+
+# Find all .sh files in ~/zshrc, exclude 'init.sh'.
+FILES_STR=$(fd --glob '*.sh' --exclude 'init.sh' ~/zshrc)
+
+# 'tr' is a find-and-replace utility.
+# Outer () will convert the output of $() to array.
+FILES=($(echo $FILES_STR | tr '\n' ' '))
+
+for FILE in $FILES; do
+    source $FILE
+done
 
 # Add history search using the arrow keys.
 autoload -U history-search-end
@@ -58,17 +70,6 @@ alias lg='lazygit'
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 
-# Set the directory we want to store zinit and plugins.
-ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
-
-# Download Zinit, if it's not there yet.
-if [ ! -d "$ZINIT_HOME" ]; then
-  mkdir -p "$(dirname $ZINIT_HOME)"
-  git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
-fi
-
-# Source/Load zinit
-source "${ZINIT_HOME}/zinit.zsh"
 
 # Apply colors from pywal to new terminals
 if [ -f ~/.cache/wal/sequences ]; then
@@ -99,8 +100,9 @@ export NVM_DIR=~/.nvm
 if [[ $(uname) == "Darwin" ]]; then
     source $(brew --prefix nvm)/nvm.sh
 else
-    source /usr/share/nvm/init-nvm.sh
+    source ~/.nvm/nvm.sh
 fi
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # place this after nvm initialization!
 autoload -U add-zsh-hook
