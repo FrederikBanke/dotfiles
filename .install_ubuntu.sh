@@ -18,6 +18,21 @@ else
     sudo apt update
 fi
 
+# Install stow
+if ! command -v "stow" &> /dev/null; then
+    echo "stow command not found. Installing..."
+    sudo apt install stow
+
+    # Check if the installation was successful
+    if command -v "brew" &> /dev/null; then
+        echo "stow installed successfully."
+    else
+        echo "Failed to install stow."
+    fi
+else
+    echo "stow already installed."
+fi
+
 # Install homebrew
 if ! command -v "brew" &> /dev/null; then
     echo "brew command not found. Installing..."
@@ -35,7 +50,7 @@ if ! command -v "brew" &> /dev/null; then
         brew install gcc
         echo "brew installed successfully."
     else
-        echo "Failed to install brew." 
+        echo "Failed to install brew."
     fi
 else
     echo "Homebrew already installed. Updating homebrew..."
@@ -51,7 +66,7 @@ if ! command -v "rg" &> /dev/null; then
     if command -v "rg" &> /dev/null; then
         echo "ripgrep installed successfully."
     else
-        echo "Failed to install ripgrep." 
+        echo "Failed to install ripgrep."
     fi
 else
     echo "ripgrep already installed."
@@ -66,7 +81,7 @@ if ! command -v "fd" &> /dev/null; then
     if command -v "fd" &> /dev/null; then
         echo "fd installed successfully."
     else
-        echo "Failed to install fd." 
+        echo "Failed to install fd."
     fi
 else
     echo "fd already installed."
@@ -81,7 +96,7 @@ if ! command -v "fzf" &> /dev/null; then
     if command -v "fzf" &> /dev/null; then
         echo "fzf installed successfully."
     else
-        echo "Failed to install fzf." 
+        echo "Failed to install fzf."
     fi
 else
     echo "fzf already installed."
@@ -96,8 +111,10 @@ if ! command -v "zoxide" &> /dev/null; then
     if command -v "zoxide" &> /dev/null; then
         echo "zoxide installed successfully."
     else
-        echo "Failed to install zoxide." 
+        echo "Failed to install zoxide."
     fi
 else
     echo "zoxide already installed."
 fi
+
+echo "Everything is installed for Ubuntu. Run 'stow .' inside the dotfiles/ directory to create links for the config files."
