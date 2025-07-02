@@ -74,6 +74,9 @@ alias ls='ls --color' # Always use colors for files and dirs
 alias lg='lazygit'
 
 # Shell integrations
+if [ -f /home/linuxbrew/.linuxbrew/bin/brew ]; then
+    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+fi
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 
