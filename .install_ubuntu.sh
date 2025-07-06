@@ -117,4 +117,9 @@ else
     echo "zoxide already installed."
 fi
 
+# Install Tmux plugin manager
+if [ -d "$HOME/.tmux/plugins/tpm" ] ; then
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+fi
+
 echo "Everything is installed for Ubuntu. Run 'stow .' inside the dotfiles/ directory to create links for the config files."
