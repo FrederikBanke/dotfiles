@@ -27,7 +27,7 @@ if [[ $(uname) == "Linux" ]]; then
 fi
 
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/banke/.zshrc'
+zstyle :compinstall filename "$HOME/.zshrc"
 
 autoload -Uz compinit
 compinit
