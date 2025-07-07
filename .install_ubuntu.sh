@@ -24,7 +24,7 @@ if ! command -v "stow" &> /dev/null; then
     sudo apt install stow
 
     # Check if the installation was successful
-    if command -v "brew" &> /dev/null; then
+    if command -v "stow" &> /dev/null; then
         echo "stow installed successfully."
     else
         echo "Failed to install stow."
