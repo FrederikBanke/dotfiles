@@ -53,13 +53,13 @@ brew install zoxide
 
 # Brew install casks. Casks are apps with a GUI
 echo "Installing brew casks..."
+brew install --cask --no-quarantine zen-browser
 brew install --cask font-hack-nerd-font
 brew install --cask ghostty
-brew install --cask --no-quarantine zen-browser
-brew install --cask wireshark
-brew install --cask sf-symbols
-brew install --cask nikitabobko/tap/aerospace
 brew install --cask mos
+brew install --cask nikitabobko/tap/aerospace
+brew install --cask sf-symbols
+brew install --cask wireshark
 
 # MacOS settings
 echo "Changing MacOS default settings..."
