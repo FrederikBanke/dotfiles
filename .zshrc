@@ -18,6 +18,13 @@ setopt hist_find_no_dups
 if [[ $(uname) == "Darwin" ]]; then
     [ -f .macrc ] && source .macrc
 fi
+# Load Ubuntu specific shell.
+if [[ $(uname) == "Linux" ]]; then
+    DIST=$(awk -F= '/^ID=/{print $2}' /etc/os-release)
+    if [[ $DIST == "ubuntu" ]]; then
+        [ -f .ubunturc ] && source .ubunturc
+    fi
+fi
 
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/banke/.zshrc'
