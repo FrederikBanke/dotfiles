@@ -38,6 +38,9 @@ if ! command -v "brew" &> /dev/null; then
     echo "brew command not found. Installing..."
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+    echo "Add brew to rc"
+    echo >> $HOME/.zshrc
+    echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> $HOME/.zshrc
     eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
     # Install Homebrew's dependencies
     echo "Install build-essential"
@@ -115,6 +118,18 @@ if ! command -v "zoxide" &> /dev/null; then
     fi
 else
     echo "zoxide already installed."
+fi
+
+if ! command -v "lazygit" &> /dev/null; then
+    echo "lazygit command not found. Installing..."
+    # lazygit is in the new repositories. If running Ubuntu 25.10 or later, use this line instead.
+    # sudo apt install lazygit
+    LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | \grep -Po '"tag_name": *"v\K[^"]*')
+    curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/download/v${LAZYGIT_VERSION}/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
+    tar xf lazygit.tar.gz lazygit
+    sudo install lazygit -D -t /usr/local/bin/
+else
+    echo "lazygit already installed."
 fi
 
 # Install Tmux plugin manager
