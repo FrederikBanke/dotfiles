@@ -145,6 +145,8 @@ cmp.setup({
 	mapping = cmp.mapping.preset.insert({
 		["<CR>"] = cmp.mapping.confirm({ select = true }),
 		["<tab>"] = cmp.mapping.confirm({ select = true }),
+		-- Make sure the OS and terminal doesn't conflict with this bind.
+		-- On MacOS, the OS has a keybind for <C-Space> to switch keyboard input source. Disable or change it.
 		["<C-Space>"] = cmp.mapping.complete(), -- Show complete
 		["<C-j>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Select }),
 		["<C-k>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Select }),
