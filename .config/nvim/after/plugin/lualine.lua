@@ -23,6 +23,7 @@ end
 
 lualine.setup({
 	sections = {
+		lualine_a = { { "mode", fmt = trunc(100, 1, nil, true, 50) } },
 		lualine_b = {
 			{ "branch", fmt = trunc(100, 10, nil, false, 50) },
 			"diff",
