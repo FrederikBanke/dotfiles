@@ -87,13 +87,15 @@ local function animate_slider_width(width)
 	end)
 end
 
-volume_icon:subscribe("mouse.clicked", function()
+local function toggle_slider()
 	if tonumber(volume_slider:query().slider.width) > 0 then
 		animate_slider_width(0)
 	else
 		animate_slider_width(100)
 	end
-end)
+end
+volume_icon:subscribe("mouse.clicked", toggle_slider)
+volume_pct:subscribe("mouse.clicked", toggle_slider)
 
 local items = {}
 
