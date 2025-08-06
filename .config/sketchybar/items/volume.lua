@@ -7,12 +7,12 @@ local volume_slider = sbar.add("slider", 100, {
 	label = { drawing = false },
 	icon = { drawing = false },
 	slider = {
-		highlight_color = colors.blue,
+		highlight_color = colors.rosepine.gold,
 		width = 0,
 		background = {
 			height = 6,
 			corner_radius = 3,
-			color = colors.bg2,
+			color = colors.rosepine.base,
 		},
 		knob = {
 			string = "􀀁",
@@ -27,7 +27,7 @@ local volume_pct = sbar.add("item", {
 	padding_right = 0,
 	label = {
 		string = "0%",
-		color = colors.rosepine.base,
+		color = colors.rosepine.text,
 		font = {
 			style = "Bold",
 			size = 14.0,
@@ -42,14 +42,14 @@ local volume_icon = sbar.add("item", {
 		string = icons.volume._100,
 		width = 0,
 		align = "left",
-		color = colors.grey,
+		color = colors.rosepine.muted,
 		font = {
 			style = "Regular",
 			size = 14.0,
 		},
 	},
 	label = {
-		color = colors.rosepine.base,
+		color = colors.rosepine.text,
 		width = 25,
 		align = "left",
 		font = {
@@ -105,6 +105,7 @@ items[volume_pct.name] = volume_pct.name
 
 sbar.add("bracket", items, {
 	background = {
-		color = colors.rosepine.text,
+		color = colors.rosepine.surface,
 	},
+	blur_radius = 20,
 })

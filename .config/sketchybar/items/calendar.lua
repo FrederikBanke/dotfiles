@@ -8,12 +8,12 @@ local cal = sbar.add("item", {
 			style = "Bold",
 			size = 14.0,
 		},
-		color = colors.rosepine.base,
+		color = colors.rosepine.text,
 	},
 	label = {
 		width = 60,
 		align = "right",
-		color = colors.rosepine.base,
+		color = colors.rosepine.text,
 		font = {
 			style = "Bold",
 			size = 14.0,
@@ -21,8 +21,9 @@ local cal = sbar.add("item", {
 		padding_right = 10,
 	},
 	background = {
-		color = colors.rosepine.text,
+		color = colors.rosepine.surface,
 	},
+	blur_radius = 20,
 	position = "right",
 	update_freq = 15,
 })

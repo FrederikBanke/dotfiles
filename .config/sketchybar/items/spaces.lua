@@ -37,16 +37,11 @@ for k, v in ipairs(aerospaces) do
 			padding_left = 10,
 			padding_right = 10,
 			color = colors.rosepine.subtle,
-			highlight_color = colors.rosepine.base,
+			highlight_color = colors.rosepine.text,
 		},
 		padding_left = 2,
 		padding_right = 2,
 		label = {
-			padding_right = 20,
-			color = colors.grey,
-			highlight_color = colors.white,
-			font = "sketchybar-app-font:Regular:16.0",
-			y_offset = -1,
 			drawing = false,
 		},
 	})
@@ -55,7 +50,7 @@ for k, v in ipairs(aerospaces) do
 	space:subscribe("mouse.clicked", mouse_click)
 	space:subscribe("aerospace_workspace_change", function(env)
 		if v == env.FOCUSED_WORKSPACE then
-			space:set({ icon = { highlight = true }, background = { color = colors.rosepine.text } })
+			space:set({ icon = { highlight = true }, background = { color = colors.rosepine.base } })
 		else
 			space:set({ icon = { highlight = false }, background = { color = colors.transparent } })
 		end
@@ -63,6 +58,7 @@ for k, v in ipairs(aerospaces) do
 	::continue::
 end -- for
 
--- sbar.add("bracket", spaces, {
--- 	background = { color = colors.rosepine.text },
--- })
+sbar.add("bracket", spaces, {
+	background = { color = colors.rosepine.surface },
+	blur_radius = 20,
+})

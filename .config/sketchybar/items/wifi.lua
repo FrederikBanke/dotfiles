@@ -4,20 +4,21 @@ local icons = require("icons")
 local wifi = sbar.add("item", {
 	icon = {
 		string = icons.wifi.disconnected,
-		color = colors.rosepine.base,
+		color = colors.rosepine.text,
 		padding_left = 10,
 		padding_right = 10,
 	},
 	label = {
 		string = "",
 		font = { style = "Bold" },
-		color = colors.rosepine.base,
+		color = colors.rosepine.text,
 		drawing = false,
 	},
 	position = "right",
 	background = {
-		color = colors.rosepine.text,
+		color = colors.rosepine.surface,
 	},
+	blur_radius = 20,
 })
 
 wifi:subscribe("wifi_change", function()

@@ -5,7 +5,7 @@ local front_app = sbar.add("item", {
 		drawing = false,
 	},
 	label = {
-		color = colors.rosepine.base,
+		color = colors.rosepine.text,
 		font = {
 			style = "Bold",
 			size = 14.0,
@@ -14,8 +14,9 @@ local front_app = sbar.add("item", {
 		padding_right = 10,
 	},
 	background = {
-		color = colors.rosepine.text,
+		color = colors.rosepine.surface,
 	},
+	blur_radius = 20,
 })
 
 front_app:subscribe("front_app_switched", function(env)

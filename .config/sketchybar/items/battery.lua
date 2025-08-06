@@ -13,20 +13,21 @@ local battery = sbar.add("item", {
 	label = {
 		drawing = true,
 		font = { style = "Bold" },
-		color = colors.rosepine.base,
+		color = colors.rosepine.text,
 		padding_left = 5,
 		padding_right = 10,
 	},
 	update_freq = 120,
 	background = {
-		color = colors.rosepine.text,
+		color = colors.rosepine.surface,
 	},
+	blur_radius = 20,
 })
 
 local function battery_update()
 	sbar.exec("pmset -g batt", function(batt_info)
 		local icon = "!"
-		local color = colors.rosepine.base
+		local color = colors.rosepine.text
 
 		local found, _, charge = batt_info:find("(%d+)%%")
 		if found then
