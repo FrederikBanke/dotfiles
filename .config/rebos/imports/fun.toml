@@ -1,0 +1,6 @@
+# Install fun apps
+[managers.system]
+items = [
+    "astroterm",
+    "cbonsai-git",
+]
