@@ -149,3 +149,7 @@ function y() {
 	fi
 	rm -f -- "$tmp"
 }
+export PATH=$PATH:/home/banke/.millennium/ext/bin
+
+# Created by `pipx` on 2025-03-17 16:44:12
+export PATH="$PATH:/home/banke/.local/bin"

@@ -3,9 +3,10 @@ $theme_fg_color: "@theme_fg_color";
 $theme_bg_color: "@theme_bg_color";
 
 window.Bar {
-    background: transparent;
-    color: #{$theme_bg_color};
+    background: #{$theme_bg_color};
+    color: #{$theme_fg_color};
     font-weight: bold;
+    margin: 10px;
 
     >centerbox {
         // background: #{$theme_bg_color};

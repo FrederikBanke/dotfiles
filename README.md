@@ -139,3 +139,13 @@ Stop den daemon with by pressing `backspace+escape+enter`.
 
 On **MacOS** this can be done with Karabiner.
 
+### Wake on LAN
+
+#### Arch
+
+Disable `ErP` in bios. If there is an option for "PCI Power up" or similar, enable it. Not all motherboards have such an option.
+
+To enable in software check if WoL is enabled with `ethtool *interface* | grep Wake-on`.
+
+If `Wake-on: d` it is disabled. Set it to `g` with `ethtool -s *interface* wol g`.
+
