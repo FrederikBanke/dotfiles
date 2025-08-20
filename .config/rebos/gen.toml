@@ -13,7 +13,6 @@ imports = [
 # Packages to be installed via the native package manager.
 [managers.system]
 items = [
-     "anyrun-git",
      "bat",
      "btop",
      "dolphin",
