@@ -7,4 +7,5 @@ items = [
      "neovim",
      "nvm",
      "prettierd",
+     "tmux",
 ]
