@@ -32,6 +32,7 @@ brew install fastfetch
 brew install fsouza/prettierd/prettierd
 brew install fzf
 brew install gh
+brew install git-delta
 brew install grep
 brew install jesseduffield/lazydocker/lazydocker
 brew install jesseduffield/lazygit/lazygit
