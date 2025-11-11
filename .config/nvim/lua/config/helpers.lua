@@ -32,4 +32,27 @@ function helpers.trunc(trunc_width, trunc_len, hide_width, no_ellipsis, max_len)
 	end
 end
 
+local function trim(s)
+	return s:match("^%s*(.-)%s*$")
+end
+
+--- Diagnostic message formatter.
+---
+---@param message string
+function helpers.formatter(message)
+	local fst = message.find(message, "ype '")
+	if fst == nil then
+		return message
+	end
+	local lst = message.find(message, "'", fst + 5)
+	if lst == nil then
+		return message
+	end
+	local obj = message.sub(message, fst + 4, lst + 1)
+	return trim(message.sub(message, 0, fst + 3))
+		.. " "
+		.. trim(obj)
+		.. "\n"
+		.. trim(helpers.formatter(message.sub(message, lst + 3)))
+end
 return helpers

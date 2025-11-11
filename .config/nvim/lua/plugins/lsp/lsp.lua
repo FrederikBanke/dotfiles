@@ -1,19 +1,4 @@
 return {
-	{
-		"hrsh7th/cmp-nvim-lsp",
-		event = { "BufReadPre", "BufNewFile" },
-		config = function()
-			-- import cmp-nvim-lsp plugin
-			local cmp_nvim_lsp = require("cmp_nvim_lsp")
-
-			-- enable autocompletion for every lsp server
-			local capabilities = cmp_nvim_lsp.default_capabilities()
-
-			vim.lsp.config("*", {
-				capabilities = capabilities,
-			})
-		end,
-	},
 	{ "nvimtools/none-ls.nvim", event = "VeryLazy" },
 	{ "MunifTanjim/prettier.nvim" },
 	{

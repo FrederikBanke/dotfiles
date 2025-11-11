@@ -1,26 +1,4 @@
-local function trim(s)
-	return s:match("^%s*(.-)%s*$")
-end
-
---- Diagnostic message formatter.
----
----@param message string
-local function formatter(message)
-	local fst = message.find(message, "ype '")
-	if fst == nil then
-		return message
-	end
-	local lst = message.find(message, "'", fst + 5)
-	if lst == nil then
-		return message
-	end
-	local obj = message.sub(message, fst + 4, lst + 1)
-	return trim(message.sub(message, 0, fst + 3))
-		.. " "
-		.. trim(obj)
-		.. "\n"
-		.. trim(formatter(message.sub(message, lst + 2)))
-end
+local h = require("config.helpers")
 return {
 	handlers = {
 		-- Setup custom diagnostic messages for TypeScript.
@@ -35,7 +13,7 @@ return {
 				local entry = result.diagnostics[idx]
 
 				if entry.message.find(entry.message, "ype '") ~= nil then
-					entry.message = formatter(entry.message)
+					entry.message = h.formatter(entry.message)
 				end
 
 				-- codes: https://github.com/microsoft/TypeScript/blob/main/src/compiler/diagnosticMessages.json
