@@ -18,6 +18,22 @@ return {
 			inc_rename = false, -- enables an input dialog for inc-rename.nvim
 			lsp_doc_border = true, -- add a border to hover docs and signature help
 		},
+		-- This is to disable the "No information available"
+		-- notifications that happened every time I hovered some code.
+		-- I think the problem was when there were multiple language servers
+		-- active for a buffer. Not all of them would have information,
+		-- thus the notification.
+		routes = {
+			{
+				filter = {
+					event = "notify",
+					find = "No information available",
+				},
+				opts = {
+					skip = true,
+				},
+			},
+		},
 	},
 	dependencies = {
 		-- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
