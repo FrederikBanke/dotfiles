@@ -3,7 +3,7 @@ return {
 	-- event = "VeryLazy",
 	dependecies = {
 		"nvim-lua/plenary.nvim",
-		{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+		"nvim-telescope/telescope-fzf-native.nvim",
 	},
 	config = function()
 		local telescope = require("telescope")
@@ -37,7 +37,7 @@ return {
 
 		-- load telescope extensions
 		telescope.load_extension("file_browser")
-		-- telescope.load_extension("fzf")
+		telescope.load_extension("fzf")
 
 		-- set keymaps
 		local keymap = vim.keymap -- for conciseness
