@@ -3,7 +3,7 @@ return {
 	ft = "dart", -- lazy load on .dart filetype.
 	dependencies = {
 		"nvim-lua/plenary.nvim",
-		"stevearc/dressing.nvim", -- optional for vim.ui.select
+		-- "stevearc/dressing.nvim", -- optional for vim.ui.select
 	},
 	config = function(opts)
 		print("Flutter tools config")
