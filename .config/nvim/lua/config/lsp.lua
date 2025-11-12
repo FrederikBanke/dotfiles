@@ -86,12 +86,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		end, opts)
 
 		keymap.set("n", "<leader>rs", ":LspRestart<CR>", h.merge(opts, { desc = "Restart LSP" })) -- mapping to restart lsp if necessary
-
-		-- Formatting
-		vim.keymap.set({ "n", "x" }, "gq", function()
-			require("conform").format({ async = true })
-			-- vim.lsp.buf.format({ async = false, timeout_ms = 10000 })
-		end, h.merge(opts, { desc = "Format file" }))
 	end,
 })
 
