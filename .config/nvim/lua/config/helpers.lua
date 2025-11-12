@@ -12,6 +12,16 @@ function helpers.merge(first_table, second_table)
 	return new_table
 end
 
+-- Will return `true`, if window width is less than `min_width`.
+--- @param min_width number the minimum width of the window.
+function helpers.is_screen_min_width(min_width)
+	local win_width = vim.fn.winwidth(0)
+	if win_width <= min_width then
+		return true
+	end
+	return false
+end
+
 --- @param trunc_width number trunctates component when screen width is less then trunc_width
 --- @param trunc_len number truncates component to trunc_len number of chars
 --- @param hide_width number|nil hides component when window width is smaller then hide_width
@@ -20,10 +30,9 @@ end
 --- return function that can format the component accordingly
 function helpers.trunc(trunc_width, trunc_len, hide_width, no_ellipsis, max_len)
 	return function(str)
-		local win_width = vim.fn.winwidth(0)
-		if hide_width and win_width < hide_width then
+		if hide_width and helpers.is_screen_min_width(hide_width) then
 			return ""
-		elseif trunc_width and trunc_len and win_width < trunc_width and #str > trunc_len then
+		elseif trunc_width and trunc_len and helpers.is_screen_min_width(trunc_width) and #str > trunc_len then
 			return str:sub(1, trunc_len) .. (no_ellipsis and "" or "...")
 		elseif #str > max_len then
 			return str:sub(1, max_len) .. (no_ellipsis and "" or "...")

@@ -35,7 +35,18 @@ return {
 					},
 					"encoding",
 					"fileformat",
-					"filetype",
+					{
+						"filetype",
+						fmt = function(str)
+							if str == "typescriptreact" and h.is_screen_min_width(120) then
+								return "tsx"
+							end
+							if str == "javascriptreact" and h.is_screen_min_width(120) then
+								return "jsx"
+							end
+							return str
+						end,
+					},
 				},
 			},
 		})
