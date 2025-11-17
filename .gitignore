@@ -1,3 +1,5 @@
 .zshrc.*
 .config/waybar/colors-waybar.css
 .DS_Store
+# Ignore flavor files. Run 'ya pkg install' to get the files
+.config/yazi/flavors/*
