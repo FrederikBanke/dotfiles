@@ -1,6 +1,6 @@
 local h = require("config.helpers")
 local keymap = vim.keymap -- for conciseness
-local telescope = require("telescope.builtin")
+local fzf = require("fzf-lua")
 
 vim.api.nvim_create_autocmd("LspAttach", {
 	group = vim.api.nvim_create_augroup("UserLspConfig", {}),
@@ -23,22 +23,17 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
 		-- set keybinds
 
-		keymap.set(
-			"n",
-			"gr",
-			telescope.lsp_references,
-			h.merge(opts, { desc = "List references of a function or variable" })
-		)
+		keymap.set("n", "gr", fzf.lsp_references, h.merge(opts, { desc = "List references of a function or variable" }))
 
 		keymap.set("n", "gD", vim.lsp.buf.declaration, h.merge(opts, { desc = "Go to declaration" })) -- go to declaration
 
 		keymap.set("n", "gd", vim.lsp.buf.definition, h.merge(opts, { desc = "Show LSP definition" })) -- show lsp definition
 
 		opts.desc = "Show LSP implementations"
-		keymap.set("n", "gi", "<cmd>Telescope lsp_implementations<CR>", opts) -- show lsp implementations
+		keymap.set("n", "gi", "<cmd>FzfLua lsp_implementations<CR>", opts) -- show lsp implementations
 
 		opts.desc = "Show LSP type definitions"
-		keymap.set("n", "gt", "<cmd>Telescope lsp_type_definitions<CR>", opts) -- show lsp type definitions
+		keymap.set("n", "gt", "<cmd>FzfLua lsp_typedefs<CR>", opts) -- show lsp type definitions
 
 		keymap.set({ "n", "v" }, "<leader>ca", function()
 			-- vim.lsp.buf.code_action()
@@ -50,7 +45,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		keymap.set(
 			"n",
 			"<leader>D",
-			"<cmd>Telescope diagnostics bufnr=0<CR>",
+			"<cmd>FzfLua diagnostics_document<CR>",
 			h.merge(opts, { desc = "Show buffer diagnostics" })
 		) -- show  diagnostics for file
 
