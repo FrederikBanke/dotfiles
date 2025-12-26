@@ -3,7 +3,7 @@
 # Script for updating wallpaper and colors matching the new wallpaper.
 # Uses pywal.
 
-wal -q -i "$HOME/Sync/Desktop Wallpapers/"
+wal -i "$HOME/Sync/Desktop Wallpapers/"
 
 # Add wallpaper to variable
 wallpaper=$(< $HOME/.cache/wal/wal)
