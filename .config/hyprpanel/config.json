@@ -460,5 +460,6 @@
   ],
   "theme.font.name": "Hack",
   "theme.font.label": "Hack",
-  "theme.bar.transparent": true
+  "theme.bar.transparent": true,
+  "scalingPriority": "gdk"
 }
