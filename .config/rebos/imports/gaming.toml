@@ -9,6 +9,7 @@ items = [
      "mangohud",
      "protontricks",
      "protonup-qt",
+     "prismlauncher", # Minecraft launcher
      "steam",
      "steamtinkerlaunch",
 ]
