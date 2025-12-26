@@ -2,6 +2,7 @@
 [managers.system]
 items = [
      "ghostty",
+     "git-delta",
      "go",
      "lazygit",
      "neovim",
