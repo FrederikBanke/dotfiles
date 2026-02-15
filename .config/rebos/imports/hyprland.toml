@@ -1,7 +1,6 @@
 # Install Hyprland and programs related to it
 [managers.system]
 items = [
-     "ags-hyprpanel-git",
      "dunst",
      "hyprcursor",
      "hypridle",
@@ -10,9 +9,10 @@ items = [
      "hyprpaper",
      "hyprshot",
      "hyprutils",
+     "noctalia-shell",
      "polkit-kde-agent",
      "python-pywal",
      "python-pywalfox",
-     "waybar",
+     "quickshell",
      "xdg-desktop-portal-hyprland",
 ]
