@@ -13,6 +13,5 @@ items = [
      "polkit-kde-agent",
      "python-pywal",
      "python-pywalfox",
-     "quickshell",
      "xdg-desktop-portal-hyprland",
 ]
