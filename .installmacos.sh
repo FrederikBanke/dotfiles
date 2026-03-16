@@ -24,7 +24,6 @@ brew tap zen-browser/desktop
 # Brew install formulae
 echo "Installing brew formulae..."
 brew install bat
-brew install borders
 brew install btop
 brew install bun
 brew install cloudfoundry/tap/cf-cli@8
