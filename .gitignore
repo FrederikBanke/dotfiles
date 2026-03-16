@@ -4,3 +4,4 @@
 # Ignore flavor files. Run 'ya pkg install' to get the files
 .config/yazi/flavors/*
 .config/yazi/plugins/*
+.config/lazygit/state.yml
