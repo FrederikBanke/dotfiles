@@ -355,8 +355,8 @@ keybinding:
     openFile: o
     scrollUpMain: <pgup>
     scrollDownMain: <pgdown>
-    scrollUpMain-alt1: K
-    scrollDownMain-alt1: J
+    scrollUpMain-alt1: å
+    scrollDownMain-alt1: ø
     scrollUpMain-alt2: <c-u>
     scrollDownMain-alt2: <c-d>
     executeShellCommand: ':'
@@ -436,8 +436,8 @@ keybinding:
     markCommitAsFixup: f
     createFixupCommit: F
     squashAboveCommits: S
-    moveDownCommit: <c-j>
-    moveUpCommit: <c-k>
+    moveDownCommit: J
+    moveUpCommit: K
     amendToCommit: A
     resetCommitAuthor: a
     pickCommit: p
