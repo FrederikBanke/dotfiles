@@ -1,5 +1,11 @@
 # Install music packages
 [managers.system]
 items = [
-     "guitarix",
+    "guitarix",
+    "gxplugins.lv2",
+    "pavucontrol",
+    "pipewire",
+    "pipewire-jack",
+    "qpwgraph",
+    "realtime-privileges",
 ]
