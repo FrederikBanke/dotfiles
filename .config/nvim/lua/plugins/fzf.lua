@@ -11,6 +11,11 @@ return {
 			grep = {
 				hidden = true,
 			},
+			keymap = {
+				fzf = {
+					["ctrl-q"] = "select-all+accept",
+				},
+			},
 		})
 
 		-- set keymaps
@@ -21,6 +26,7 @@ return {
 		keymap.set("n", "<leader>ps", function()
 			fzf.live_grep()
 		end, { desc = "Search content of project files" })
+		keymap.set("n", "<leader>pr", fzf.resume, { desc = "Resume last search" })
 		vim.keymap.set("n", "<leader>buf", fzf.buffers, { desc = "View open buffers" })
 	end,
 }
