@@ -1,0 +1,16 @@
+----------------
+--- MONITORS ---
+----------------
+
+-- See https://wiki.hyprland.org/Configuring/Monitors/
+hl.monitor({
+    output = "DP-1",
+    mode = "3840x2160@240",
+    position = "0x0",
+    scale = 1.5,
+    bitdepth = 10,
+    cm = "hdr",
+})
+
+-- unscale XWayland (useful for 4k displays)
+hl.config({ xwayland = { force_zero_scaling = true } })
