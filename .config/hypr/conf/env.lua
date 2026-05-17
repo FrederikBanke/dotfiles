@@ -13,7 +13,7 @@ hl.env("XDG_SESSION_TYPE", "wayland")
 -------------------
 
 terminal = "ghostty"
-fileManager = "dolphin"
+fileManager = "thunar"
 menu = "wofi -S drun"
 browser = "zen-browser"
 steam = "~/.millennium/start.sh"      -- Steam with Millennium

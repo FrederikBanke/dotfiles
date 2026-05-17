@@ -15,7 +15,6 @@ imports = [
 items = [
      "bat",
      "btop",
-     "dolphin",
      "figlet",
      "flatpak",
      "git",
@@ -33,6 +32,7 @@ items = [
      "stow",
      "syncthing",
      "teamspeak3",
+     "thunar",
      "xorg-xhost", # Could not open apps requiring passwd without this
      "yazi",
      "zen-browser-bin",
